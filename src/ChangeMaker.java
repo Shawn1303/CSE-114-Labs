@@ -16,5 +16,6 @@ public class ChangeMaker {
 		+ ds + " dimes,");
 		System.out.println(ns + " nickels and"
 		+ ps + " pennies");
+		input.close();
 		}
 }

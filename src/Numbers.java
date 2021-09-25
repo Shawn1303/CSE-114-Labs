@@ -26,6 +26,7 @@ public class Numbers {
 			divisible = false;
 		}
 		System.out.println("Is 10 divisible by 5 or 6, but not both? " + divisible);
+		input.close();
 	}
 
 }

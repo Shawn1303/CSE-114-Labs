@@ -9,6 +9,7 @@ public class Temperature {
 		int t_a = temp.nextInt();
 		int v = temp.nextInt();
 		System.out.println("The wind-chill temperature is: " + (35.74+0.6215*t_a-35.57*Math.pow(v,  0.16)+0.4275*t_a*Math.pow(v, 0.16)));
+		temp.close();
 	}
 
 }

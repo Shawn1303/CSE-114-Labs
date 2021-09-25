@@ -87,6 +87,7 @@ public class ChangeMakerModified {
 		if (ps != 0)
 
 			System.out.println(ps + " x 1c coins");
+		input.close();
 
 	}
 

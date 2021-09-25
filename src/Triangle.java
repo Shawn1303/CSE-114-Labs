@@ -23,6 +23,7 @@ public class Triangle {
 		} else {
 			System.out.println("Output: Invalid input!");
 		}
+		input.close();
 	}
 
 }

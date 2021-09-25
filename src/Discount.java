@@ -27,5 +27,7 @@ public class Discount {
 				+ "\nDiscounted price: $" + discountedPrice
 				+ "\nDiscounted amount per unit: $" + discountedAmount
 				+ "\nTotal price: $" + discountedPrice + "*" + quantity + "= $" + totalPrice);
+		inputPrice.close();
+		inputquantity.close();
 	}
 }

@@ -12,5 +12,6 @@ public class Gasoline {
 		mpg = input.nextDouble();
 		galConsumed = minutes/60*mph/mpg;
 		System.out.println("Consumed gas for the period (in gallons): " + galConsumed);
+		input.close();
 	}
 }
