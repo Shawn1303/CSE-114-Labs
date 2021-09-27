@@ -8,5 +8,6 @@ public class Celsius2Fahrenheit {
 	    fahrenheit = (9.0/5)*celsius + 32;
 	    System.out.println(celsius + " in Celsius is " + fahrenheit + " in Fahrenheit");  
 	    celInput.close();
+
 	  }
 }
