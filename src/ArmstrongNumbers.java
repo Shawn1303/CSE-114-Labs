@@ -14,7 +14,7 @@ public class ArmstrongNumbers {
 				System.out.println(i + " ");
 			}
 		}
-
+		input.close();
 	}
 	public static boolean isArmstrong(int n) {
 		int oldN = n;

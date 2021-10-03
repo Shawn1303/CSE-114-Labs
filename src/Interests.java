@@ -21,6 +21,7 @@ public class Interests {
 					/ (1 - (Math.pow(1 / (1 + monthlyInterestRate), numberOfYears * 12)))) * 100) / 100.0;
 			totalPayment = (int) ((monthlyPayment * numberOfYears * 12) * 100) / 100.0;
 		}
+		input.close();
 	}
 
 }

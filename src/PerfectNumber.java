@@ -18,6 +18,7 @@ public class PerfectNumber {
 		for(int i: perfectNumber) {
 			System.out.print(i + " ");
 		}
+		input.close();
 	}
 
 }
