@@ -22,7 +22,7 @@ public class MyString1 {
 	}
 
 	public MyString1 toLowerCase() {
-		char[] array = new char[char.length];
+		char[] array = new char[chars.length];
 		for (int i = 0; i < chars.length; i++) {
 			array[i] = Character.toLowerCase(chars[i]);
 		}
@@ -51,7 +51,6 @@ public class MyString1 {
 		char[] array = new char[size];
 		
 		int index = 1;
-		String string = "";
 		while (i != 0) {
 			int v = i % 10;
 			array[size - index] = (char) v;
