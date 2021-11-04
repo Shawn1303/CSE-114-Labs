@@ -9,7 +9,7 @@ public class Zipcode {
 		
 		if(string.matches("[0-9]{5}")) System.out.println("valid zipcode");
 		else System.out.println("invalid zipcode");
-
+		input.close();
 	}
 
 }

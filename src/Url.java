@@ -9,6 +9,7 @@ public class Url {
 		
 		if(string.matches("http[s]{0, 1}://www.(.){2,}\\.(.){2.3}")) System.out.println("Valid");
 		else System.out.println("invalid");
+		input.close();
 	}
 
 }

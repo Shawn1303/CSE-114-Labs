@@ -19,6 +19,7 @@ public class Palindrome {
 		}
 		if(isPalin) System.out.println("string is palindrome");
 		else System.out.println("string is not a palidrome");
+		input.close();
 	}
 
 }

@@ -9,6 +9,7 @@ public class Email {
 		
 		if(string.matches("(.)+@(.)+")) System.out.println("Valid email");
 		else System.out.println("Invalid email");
+		input.close();
 	}
 
 }

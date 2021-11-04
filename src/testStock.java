@@ -8,14 +8,14 @@ public class testStock {
 		System.out.println("The percentage change is " + stock1.changePercent());
 		
 		Stock stock2 = new Stock("FB", "Facebook Inc.");
-		stock1.setPreviousClosingPrice(345.96);
-		stock1.setCurrentPrice(324.61);
-		System.out.println("The percentage change is " + stock1.changePercent());
+		stock2.setPreviousClosingPrice(345.96);
+		stock2.setCurrentPrice(324.61);
+		System.out.println("The percentage change is " + stock2.changePercent());
 		
 		Stock stock3 = new Stock("AMZN", "Amazon.com Inc.");
-		stock1.setPreviousClosingPrice(3416.00);
-		stock1.setCurrentPrice(3335.55);
-		System.out.println("The percentage change is " + stock1.changePercent());
+		stock3.setPreviousClosingPrice(3416.00);
+		stock3.setCurrentPrice(3335.55);
+		System.out.println("The percentage change is " + stock3.changePercent());
 	}
 
 }

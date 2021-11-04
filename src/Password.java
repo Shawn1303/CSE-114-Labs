@@ -26,6 +26,7 @@ public class Password {
 			if(lower && upper && special && number) System.out.println("valid password");
 			else System.out.println("invalid password");
 		}
+		input.close();
 	}
 
 }
