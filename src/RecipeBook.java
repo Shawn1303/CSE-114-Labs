@@ -6,18 +6,17 @@ public class RecipeBook {
 	public RecipeBook() {}
 	public RecipeBook(String bookName) {
 		this.bookName = bookName;
+		this.list2 = new CookingRecipe[0];
 	}
 
 	public CookingRecipe addRecipe(String name, RecipeIngredient[] ingredients) {
-		for(int i = 0; i<list2.length; i++) {
-			if (((CookingRecipe) list2[i]).getName() == name && ((CookingRecipe) list2[i]).getList() == ingredients) {
+		for (CookingRecipe cookingRecipe : list2) {
+			if (cookingRecipe.getName().equals(name)) {
 				return null;
 			}
 		}
 		CookingRecipe[] temp = new CookingRecipe[list2.length + 1];
-		for(int i = 0; i<list2.length; i++) {
-			temp[i] = list2[i];
-		}
+		System.arraycopy(list2, 0, temp, 0, list2.length);
 		temp[list2.length] = new CookingRecipe(name, ingredients);
 		CookingRecipe r = temp[list2.length];
 		list2 = temp;
@@ -28,7 +27,7 @@ public class RecipeBook {
 		boolean remove = false;
 		CookingRecipe r = null;
 		for(int i = 0; i<list2.length; i++) {
-			if (list2[i].getName() == name) {
+			if (list2[i].getName().equals(name)) {
 				r = list2[i];
 				list2[i] = null;
 				remove = true;
@@ -51,13 +50,11 @@ public class RecipeBook {
 	
 	public CookingRecipe[] findRecipes(RecipeIngredient[] ingredients) {
 		CookingRecipe[] list3 = new CookingRecipe[0];
-		for(int i = 0; i<list2.length; i++) {
-			if(list2[i].getList() == ingredients) {
+		for (CookingRecipe cookingRecipe : list2) {
+			if (cookingRecipe.equals(ingredients)) {
 				CookingRecipe[] temp = new CookingRecipe[list3.length + 1];
-				for(int j = 0; j<list3.length; j++) {
-					temp[j] = list3[j];
-				}
-				temp[list3.length] = list2[i];
+				System.arraycopy(list3, 0, temp, 0, list3.length);
+				temp[list3.length] = cookingRecipe;
 				list3 = temp;
 			}
 		}
@@ -67,13 +64,11 @@ public class RecipeBook {
 	
 	public CookingRecipe[] findRecipesWithFewIngredients(int numberOfIngredients) {
 		CookingRecipe[] list3 = new CookingRecipe[0];
-		for(int i = 0; i<list2.length; i++) {
-			if(list2[i].getList().length == numberOfIngredients) {
+		for (CookingRecipe cookingRecipe : list2) {
+			if (cookingRecipe.getNumberOfIngredients() <= numberOfIngredients) {
 				CookingRecipe[] temp = new CookingRecipe[list3.length + 1];
-				for(int j = 0; j<list3.length; j++) {
-					temp[j] = list3[j];
-				}
-				temp[list3.length] = list2[i];
+				System.arraycopy(list3, 0, temp, 0, list3.length);
+				temp[list3.length] = cookingRecipe;
 				list3 = temp;
 			}
 		}
@@ -89,13 +84,11 @@ public class RecipeBook {
 			}
 		}
 		CookingRecipe[] list4 = new CookingRecipe[0];
-		for(int i = 0; i<list2.length; i++) {
-			if(list2[i].calculateCalories() == min) {
+		for (CookingRecipe cookingRecipe : list2) {
+			if (cookingRecipe.calculateCalories() == min) {
 				CookingRecipe[] temp = new CookingRecipe[list4.length + 1];
-				for(int j = 0; j<list4.length; j++) {
-					temp[j] = list4[j];
-				}
-				temp[list4.length] = list2[i];
+				System.arraycopy(list4, 0, temp, 0, list4.length);
+				temp[list4.length] = cookingRecipe;
 				list4 = temp;
 			}
 		}
@@ -106,4 +99,16 @@ public class RecipeBook {
 	public String getName() {
 		return this.bookName;
 	}
+
+	public CookingRecipe[] getList() {return list2;}
+
+
+	public String toString() {
+		StringBuilder a = new StringBuilder("Cooking Recipe name is " + bookName);
+		for(CookingRecipe cookingrecipe: list2) {
+			a.append("\n").append(cookingrecipe.toString());
+		}
+		return a.toString();
+	}
+
 }

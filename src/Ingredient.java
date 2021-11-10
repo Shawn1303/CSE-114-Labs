@@ -21,13 +21,15 @@ public class Ingredient {
 	public int getCaloriesPerUnit() {
 		return this.caloriesPerUnit;
 	}
+
+	public void setName(String name) { this.name = name;}
+
+	public void setMeasuringUnit(String measuringUnit) { this.measuringUnit = measuringUnit;}
+
+	public void setCaloriesPerUnit(int caloriesPerUnit) { this.caloriesPerUnit = caloriesPerUnit;}
 	
 	public boolean equals(Ingredient a) {
-		if(this.name == a.getName() && this.measuringUnit == a.getMeasuringUnit() && this.caloriesPerUnit == a.getCaloriesPerUnit()) {
-			return true;
-		} else {
-			return false;
-		}
+		return this.name.equals(a.getName()) && this.measuringUnit.equals(a.getMeasuringUnit()) && this.caloriesPerUnit == a.getCaloriesPerUnit();
 	}
 	
 	public String toString() {
