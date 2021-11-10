@@ -22,6 +22,7 @@ public class LongestCommonPrefix {
 		} else {
 			System.out.println(s.substring(0, sum));
 		}
+		input.close();
 	}
 
 }
